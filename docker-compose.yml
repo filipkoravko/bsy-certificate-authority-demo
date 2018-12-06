@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bsy:
+    container_name: "bsy"
+    image: "nginx"
+    ports:
+    - "9443:443"
+    volumes:
+    - ./certs:/etc/nginx/certs
+    - ./nginx.conf.d:/etc/nginx/conf.d
+    - ./content:/usr/share/nginx/html
